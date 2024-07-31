@@ -35,6 +35,7 @@ public class Base extends excel_testdata {
         // Initialize ChromeDriver with ChromeOptions
         driver = new ChromeDriver(options);
         driver.get(url);
+        driver.manage().deleteAllCookies();
         //driver.manage().window().setSize(new Dimension(1920, 1080));
         driver.manage().window().maximize();
     }
