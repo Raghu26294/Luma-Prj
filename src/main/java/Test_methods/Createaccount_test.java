@@ -51,10 +51,11 @@ public class Createaccount_test extends Createaccount {
         confirmpasswordtest();
     }
 
-    //@Test
+    @Test
     //creating account in the website by providing all details
     public void Createaccount_006() {
-         createaccount();
+
+        createaccount();
     }
 
     @Test
