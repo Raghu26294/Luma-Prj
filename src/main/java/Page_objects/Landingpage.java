@@ -19,8 +19,8 @@ public class Landingpage extends Base {
 
     By yoga_button = By.xpath("//*[@id='maincontent']/div[3]/div/div[2]/div[1]/a/span/span[2]");
     By pants_button = By.xpath("//*[@id='maincontent']/div[3]/div/div[2]/div[1]/div/a[1]/span/span[2]");
-    By tees_button = By.xpath("//*[@id=maincontent']/div[3]/div/div[2]/div[1]/div/a[2]/span[2]/span[2]");
-    By page_title = By.xpath("//*[@id=\"page-title-heading\"]/span");
+    By tees_button = By.xpath("//*[@id='maincontent']/div[3]/div/div[2]/div[1]/div/a[2]/span[2]/span[2]");
+    By page_title = By.xpath("//*[@id='page-title-heading']/span");
 
 
     public void shop_yoga() {
