@@ -20,7 +20,7 @@ public class Base extends excel_testdata {
 
     public static void launch_browser(String url) throws IOException {
 
-        System.setProperty("webdriver.chrome.driver","chromedriver.exe" );
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-extensions");
         options.addArguments("--disable-gpu");
@@ -41,16 +41,6 @@ public class Base extends excel_testdata {
 
     public static void close_browser() {
         driver.quit();
-    }
-
-    public static void get_scrn_shot(String Filename) throws IOException {
-
-        String File_path = "C:\\Users\\LENOVO\\Desktop\\selenium assignments\\Screenshots\\";
-        String fullpath = File_path+Filename;
-        TakesScreenshot scr_shot= ((TakesScreenshot)driver);
-        File f =scr_shot.getScreenshotAs(OutputType.FILE);
-        File loc =new File(fullpath);
-        FileUtils.copyFile(f, loc);
     }
 
 
