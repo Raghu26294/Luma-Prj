@@ -12,7 +12,7 @@ public class Homepage_test extends Homepage {
 
     @Test
     public void Homepage_001() {
-        Whatsnew_tab();
+        Whatsnew();
     }
 
     @Test

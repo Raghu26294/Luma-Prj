@@ -41,6 +41,7 @@ public class Base extends excel_testdata {
     }
 
     public static void close_browser() {
+        driver.close();
         driver.quit();
     }
 

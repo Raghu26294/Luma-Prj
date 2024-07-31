@@ -11,11 +11,11 @@ import org.testng.Assert;
 public class Homepage extends Base {
 
     By Whatsnew_tab = By.xpath("//*[@id='ui-id-3']/span");
-    By women_tab = By.xpath("//*[@id='ui-id-4']/span[2]");
-    By men_tab = By.xpath("//*[@id='ui-id-5'/span[2]");
-    By gear_tab = By.xpath("//*[@id='ui-id-6']");
-    By training_tab = By.xpath("//*[@id='ui-id-7']");
-    By sale_tab = By.xpath("//*[@id='ui-id-8']");
+    By women_tab = By.xpath("//a[span[text()='Women']]");
+    By men_tab = By.xpath("//a[span[text()='Men']]");
+    By gear_tab = By.xpath("//a[span[text()='Gear']]");
+    By training_tab = By.xpath("//a[span[text()='Training']]");
+    By sale_tab = By.xpath("//a[span[text()='Sale']]");
     By page_title = By.xpath("//*[@id='page-title-heading']/span");
     By cart_btn = By.xpath("/html/body/div[2]/header/div[2]/div[1]/a");
     By cart_msg = By.xpath("//*[@id='minicart-content-wrapper']/div[2]/strong");
@@ -24,8 +24,8 @@ public class Homepage extends Base {
     By search_rslt_pgtitle = By.xpath("//*[@id='maincontent']/div[1]/h1/span");
 
 
-    public void Whatsnew_tab() {
-         driver.findElement(Whatsnew_tab).click();
+    public void Whatsnew() {
+        driver.findElement(Whatsnew_tab).click();
         String Actual_title = driver.findElement(page_title).getText();
         String expected_title = read_excel(18, 2);
         System.out.println("Actual_title : " + Actual_title);
