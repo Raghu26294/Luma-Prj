@@ -2,11 +2,6 @@ package Test_methods;
 
 import org.testng.annotations.Test;
 import Page_objects.Homepage;
-import org.testng.annotations.BeforeMethod;
-
-import java.io.IOException;
-
-import org.testng.annotations.AfterMethod;
 
 public class Homepage_test extends Homepage {
 
@@ -50,18 +45,5 @@ public class Homepage_test extends Homepage {
         verify_Searchbox();
     }
 
-
-    @BeforeMethod
-    public void beforeMethod() throws IOException {
-        if (driver == null) {
-            launch_browser("https://magento.softwaretestingboard.com/");
-        }
-    }
-
-    @AfterMethod
-    public void afterMethod() {
-
-        close_browser();
-    }
 
 }

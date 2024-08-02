@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import Utilities.Base;
 import org.testng.Assert;
 
+
 public class Createaccount extends Base {
 
 
@@ -62,6 +63,7 @@ public class Createaccount extends Base {
     }
 
     public void firstname() {
+        createaccountpage();
         enterLastName(read_excel(3, 2));
         enterEmailadd(read_excel(4, 2));
         enterPassword(read_excel(5, 2));
@@ -69,12 +71,12 @@ public class Createaccount extends Base {
         driver.findElement(Crt_button).click();
         String actualError = driver.findElement(First_name_err).getText();
         String expectedError = read_excel(7, 2);
-        System.out.println("Actual First Name Error: " + actualError);
-        System.out.println("Expected First Name Error from Excel: " + expectedError);
+        System.out.println("Actual First Name Error: " + actualError+ " and Expected First Name Error " + expectedError);
         Assert.assertEquals(actualError, expectedError, "First name error message mismatch");
     }
 
     public void lastname() {
+        createaccountpage();
         enterFirstName(read_excel(2, 2));
         enterEmailadd(read_excel(4, 2));
         enterPassword(read_excel(5, 2));
@@ -82,12 +84,12 @@ public class Createaccount extends Base {
         driver.findElement(Crt_button).click();
         String actualError = driver.findElement(Last_name_err).getText();
         String expectedError = read_excel(7, 2);
-        System.out.println("Actual Last Name Error: " + actualError);
-        System.out.println("Expected Last Name Error from Excel: " + expectedError);
+        System.out.println("Actual Last Name Error: " + actualError + " and Expected Last Name Error"  +expectedError);
         Assert.assertEquals(actualError, expectedError, "Last name error message mismatch");
     }
 
     public void emailaddresstest() {
+        createaccountpage();
         enterFirstName(read_excel(2, 2));
         enterLastName(read_excel(3, 2));
         enterPassword(read_excel(5, 2));
@@ -95,12 +97,12 @@ public class Createaccount extends Base {
         driver.findElement(Crt_button).click();
         String actualError = driver.findElement(Email_add_err).getText();
         String expectedError = read_excel(7, 2);
-        System.out.println("Actual Email address Error: " + actualError);
-        System.out.println("Expected Email address Error from Excel: " + expectedError);
+        System.out.println("Actual Email Error: " + actualError + " and Expected Email  Error"  +expectedError);
         Assert.assertEquals(actualError, expectedError, "Email address error message mismatch");
     }
 
     public void passwordtest() {
+        createaccountpage();
         enterFirstName(read_excel(2, 2));
         enterLastName(read_excel(3, 2));
         enterEmailadd(read_excel(4, 2));
@@ -108,12 +110,12 @@ public class Createaccount extends Base {
         driver.findElement(Crt_button).click();
         String actualError = driver.findElement(Pass_err).getText();
         String expectedError = read_excel(7, 2);
-        System.out.println("Actual Password Error: " + actualError);
-        System.out.println("Expected Password Error from Excel: " + expectedError);
+        System.out.println("Actual Password Error: " + actualError + " and Expected Password Error"  +expectedError);
         Assert.assertEquals(actualError, expectedError, "Password error message mismatch");
     }
 
     public void confirmpasswordtest() {
+        createaccountpage();
         enterFirstName(read_excel(2, 2));
         enterLastName(read_excel(3, 2));
         enterEmailadd(read_excel(4, 2));
@@ -121,38 +123,37 @@ public class Createaccount extends Base {
         driver.findElement(Crt_button).click();
         String actualError = driver.findElement(Pass_con_err).getText();
         String expectedError = read_excel(7, 2);
-        System.out.println("Actual Password confirmation Error: " + actualError);
-        System.out.println("Expected  Password confirmation Error from Excel: " + expectedError);
+        System.out.println("Actual Confirm password Error: " + actualError + " and Expected Confirm Password Error"  +expectedError);
         Assert.assertEquals(actualError, expectedError, "Password confirmation error message mismatch");
     }
 
     public void createaccount() {
+        createaccountpage();
         enterFirstName(read_excel(2, 2));
         enterLastName(read_excel(3, 2));
         enterEmailadd(read_excel(4, 2));
         enterPassword(read_excel(5, 2));
         enterconfirmpass(read_excel(6, 2));
         driver.findElement(Crt_button).click();
+        timeout(10);
         String accountcreatemsg = driver.findElement(acc_crt_msg).getText();
         System.out.println("Account Created: " + accountcreatemsg);
     }
 
 
-    public void existingaccount() {
+    public void existingaccount()  {
+        timeout(5);
+        launch_browser("https://magento.softwaretestingboard.com/");
+        createaccountpage();
         enterFirstName(read_excel(2, 2));
         enterLastName(read_excel(3, 2));
-        enterEmailadd(read_excel(4, 2));
+        enterEmailadd(read_excel(9, 2));
         enterPassword(read_excel(5, 2));
         enterconfirmpass(read_excel(6, 2));
         driver.findElement(Crt_button).click();
         String actualError = driver.findElement(acc_cre_err).getText();
         String expectedError = read_excel(8, 2);
-        System.out.println("Actual account already exists error: " + actualError);
-        System.out.println("Expected account already exists error: " + expectedError);
+        System.out.println("Actual Account exists Error: " + actualError + " and Expected Account exists Error"  +expectedError);
         Assert.assertEquals(actualError, expectedError, "account already exists error");
     }
 }
-
-	
-
-

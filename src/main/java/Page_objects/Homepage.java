@@ -2,7 +2,6 @@ package Page_objects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import Utilities.Base;
@@ -10,7 +9,7 @@ import org.testng.Assert;
 
 public class Homepage extends Base {
 
-    By Whatsnew_tab = By.xpath("//*[@id='ui-id-3']/span");
+    By Whatsnew_tab = By.xpath("//*[@id='ui-id-3']");
     By women_tab = By.xpath("//a[span[text()='Women']]");
     By men_tab = By.xpath("//a[span[text()='Men']]");
     By gear_tab = By.xpath("//a[span[text()='Gear']]");
@@ -28,8 +27,7 @@ public class Homepage extends Base {
         driver.findElement(Whatsnew_tab).click();
         String Actual_title = driver.findElement(page_title).getText();
         String expected_title = read_excel(18, 2);
-        System.out.println("Actual_title : " + Actual_title);
-        System.out.println("expected_title : " + expected_title);
+        System.out.println("Actual_title : " + Actual_title + " and expected_title : " + expected_title);
         Assert.assertEquals(Actual_title, expected_title, "Title mismatch found");
     }
 
@@ -37,8 +35,7 @@ public class Homepage extends Base {
         driver.findElement(women_tab).click();
         String Actual_title = driver.findElement(page_title).getText();
         String expected_title = read_excel(19, 2);
-        System.out.println("Actual_title : " + Actual_title);
-        System.out.println("expected_title : " + expected_title);
+        System.out.println("Actual_title : " + Actual_title + " and expected_title : " + expected_title);
         Assert.assertEquals(Actual_title, expected_title, "Title mismatch found");
     }
 
@@ -46,8 +43,7 @@ public class Homepage extends Base {
         driver.findElement(men_tab).click();
         String Actual_title = driver.findElement(page_title).getText();
         String expected_title = read_excel(20, 2);
-        System.out.println("Actual_title : " + Actual_title);
-        System.out.println("expected_title : " + expected_title);
+        System.out.println("Actual_title : " + Actual_title + " and expected_title : " + expected_title);
         Assert.assertEquals(Actual_title, expected_title, "Title mismatch found");
     }
 
@@ -55,8 +51,7 @@ public class Homepage extends Base {
         driver.findElement(gear_tab).click();
         String Actual_title = driver.findElement(page_title).getText();
         String expected_title = read_excel(21, 2);
-        System.out.println("Actual_title : " + Actual_title);
-        System.out.println("expected_title : " + expected_title);
+        System.out.println("Actual_title : " + Actual_title + " and expected_title : " + expected_title);
         Assert.assertEquals(Actual_title, expected_title, "Title mismatch found");
     }
 
@@ -64,8 +59,7 @@ public class Homepage extends Base {
         driver.findElement(training_tab).click();
         String Actual_title = driver.findElement(page_title).getText();
         String expected_title = read_excel(22, 2);
-        System.out.println("Actual_title : " + Actual_title);
-        System.out.println("expected_title : " + expected_title);
+        System.out.println("Actual_title : " + Actual_title + " and expected_title : " + expected_title);
         Assert.assertEquals(Actual_title, expected_title, "Title mismatch found");
     }
 
@@ -73,8 +67,7 @@ public class Homepage extends Base {
         driver.findElement(sale_tab).click();
         String Actual_title = driver.findElement(page_title).getText();
         String expected_title = read_excel(23, 2);
-        System.out.println("Actual_title : " + Actual_title);
-        System.out.println("expected_title : " + expected_title);
+        System.out.println("Actual_title : " + Actual_title + " and expected_title : " + expected_title);
         Assert.assertEquals(Actual_title, expected_title, "Title mismatch found");
     }
 
@@ -83,8 +76,7 @@ public class Homepage extends Base {
         driver.findElement(cart_btn).click();
         String Actual_title = driver.findElement(cart_msg).getText();
         String expected_title = read_excel(24, 2);
-        System.out.println("Actual_title : " + Actual_title);
-        System.out.println("expected_title : " + expected_title);
+        System.out.println("Actual_title : " + Actual_title + " and expected_title : " + expected_title);
         Assert.assertEquals(Actual_title, expected_title, "Title mismatch found");
     }
 
@@ -99,8 +91,7 @@ public class Homepage extends Base {
                 .build().perform();
         String Actual_title = driver.findElement(search_rslt_pgtitle).getText();
         String expected_title = read_excel(26, 2);
-        System.out.println("Actual_title : " + Actual_title);
-        System.out.println("expected_title : " + expected_title);
+        System.out.println("Actual_title : " + Actual_title + " and expected_title : " + expected_title);
         Assert.assertEquals(Actual_title, expected_title, "Title mismatch found");
 
 

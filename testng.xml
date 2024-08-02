@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Testing">
-    <classes>
-      <class name="Test_methods.Createaccount_test"/>
-      <class name="Test_methods.Signin_test"/>
-      <class name="Test_methods.Homepage_test"/>
-      <class name="Test_methods.Womenpage_test"/>
-      <class name="Test_methods.Landingpage_test"/>
-    </classes>
-  </test> <!-- Testing -->
+    <test thread-count="5" name="Testing">
+        <classes>
+            <class name="Test_methods.TestBase"/>
+            <class name="Test_methods.Signin_test"/>
+            <class name="Test_methods.Landingpage_test"/>
+            <class name="Test_methods.Homepage_test"/>
+            <class name="Test_methods.Womenpage_test"/>
+            <class name="Test_methods.Createaccount_test"/>
+        </classes>
+    </test> <!-- Testing -->
 </suite> <!-- Suite -->
